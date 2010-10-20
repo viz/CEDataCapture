@@ -1,0 +1,1185 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-10-21 07:29:03) [GET]
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+Completed in 214ms (View: 30, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (169.9ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `schema_migrations`[0m
+  [4;36;1mSQL (53.9ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateBusinesses (20101020203634)
+  [4;35;1mSQL (13.5ms)[0m   [0mCREATE TABLE `businesses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `Name` varchar(255), `AddressLine1` varchar(255), `AddressLine2` varchar(255), `Suburb` varchar(255), `State` varchar(255), `Postcode` varchar(255), `Review` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (15.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101020203634')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `businesses`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `businesses`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-21 07:37:28) [GET]
+
+ActionController::RoutingError (No route matches "/business" with {:method=>:get}):
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#index (for 127.0.0.1 at 2010-10-21 07:37:32) [GET]
+  [4;36;1mBusiness Load (0.3ms)[0m   [0;1mSELECT * FROM `businesses` [0m
+Rendering template within layouts/businesses
+Rendering businesses/index
+Completed in 109ms (View: 93, DB: 0) | 200 OK [http://localhost/businesses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#index (for 127.0.0.1 at 2010-10-21 07:40:46) [GET]
+  [4;36;1mBusiness Load (0.1ms)[0m   [0;1mSELECT * FROM `businesses` [0m
+Rendering template within layouts/businesses
+Rendering businesses/index
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/businesses]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#new (for 127.0.0.1 at 2010-10-21 07:40:54) [GET]
+  [4;36;1mBusiness Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+Rendering template within layouts/businesses
+Rendering businesses/new
+Completed in 58ms (View: 47, DB: 2) | 200 OK [http://localhost/businesses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#create (for 127.0.0.1 at 2010-10-21 07:41:42) [POST]
+  Parameters: {"commit"=>"Create", "business"=>{"AddressLine1"=>"Old Pittwater Rd", "AddressLine2"=>"", "Name"=>"Community Engine", "Review"=>"This is a sample business listing", "Postcode"=>"2096", "Suburb"=>"Brookvale", "State"=>"NSW"}, "authenticity_token"=>"f2Oo6xRJ5PwjmHMf24ooE8RE7QVr2YuowfFFxJaoF3E="}
+  [4;36;1mBusiness Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mBusiness Create (5.9ms)[0m   [0;1mINSERT INTO `businesses` (`AddressLine1`, `AddressLine2`, `created_at`, `Name`, `updated_at`, `Review`, `Postcode`, `Suburb`, `State`) VALUES('Old Pittwater Rd', '', '2010-10-20 20:41:42', 'Community Engine', '2010-10-20 20:41:42', 'This is a sample business listing', '2096', 'Brookvale', 'NSW')[0m
+  [4;35;1mSQL (17.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/businesses/1
+Completed in 45ms (DB: 39) | 302 Found [http://localhost/businesses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#show (for 127.0.0.1 at 2010-10-21 07:41:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBusiness Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (28.3ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+Rendering template within layouts/businesses
+Rendering businesses/show
+Completed in 37ms (View: 5, DB: 29) | 200 OK [http://localhost/businesses/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#index (for 127.0.0.1 at 2010-10-21 07:41:58) [GET]
+  [4;36;1mBusiness Load (0.3ms)[0m   [0;1mSELECT * FROM `businesses` [0m
+Rendering template within layouts/businesses
+Rendering businesses/index
+  [4;35;1mBusiness Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/businesses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#show (for 127.0.0.1 at 2010-10-21 07:42:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBusiness Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (0.1ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+Rendering template within layouts/businesses
+Rendering businesses/show
+Completed in 7ms (View: 2, DB: 1) | 200 OK [http://localhost/businesses/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#index (for 127.0.0.1 at 2010-10-21 07:42:14) [GET]
+  [4;36;1mBusiness Load (0.1ms)[0m   [0;1mSELECT * FROM `businesses` [0m
+Rendering template within layouts/businesses
+Rendering businesses/index
+  [4;35;1mBusiness Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/businesses]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeaturesController#index (for 127.0.0.1 at 2010-10-21 07:42:25) [GET]
+  [4;35;1mFeature Load (0.0ms)[0m   [0mMysql::Error: Table 'CEDataCapture_DEV.features' doesn't exist: SELECT * FROM `features` [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'CEDataCapture_DEV.features' doesn't exist: SELECT * FROM `features` ):
+  app/controllers/features_controller.rb:5:in `index'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.2ms)
+Rendered rescues/_request_and_response (53.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateBusinesses (20101020203634)
+Migrating to CreateFeatures (20101020203911)
+  [4;35;1mSQL (66.7ms)[0m   [0mCREATE TABLE `features` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `Name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101020203911')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `businesses`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `businesses`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `features`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `features`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeaturesController#index (for 127.0.0.1 at 2010-10-21 07:42:46) [GET]
+  [4;35;1mFeature Load (0.7ms)[0m   [0mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+Completed in 17ms (View: 11, DB: 1) | 200 OK [http://localhost/features]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeaturesController#new (for 127.0.0.1 at 2010-10-21 07:42:48) [GET]
+  [4;35;1mFeature Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+Rendering template within layouts/features
+Rendering features/new
+Completed in 10ms (View: 7, DB: 1) | 200 OK [http://localhost/features/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeaturesController#create (for 127.0.0.1 at 2010-10-21 07:42:56) [POST]
+  Parameters: {"feature"=>{"Name"=>"Fireplace"}, "commit"=>"Create", "authenticity_token"=>"f2Oo6xRJ5PwjmHMf24ooE8RE7QVr2YuowfFFxJaoF3E="}
+  [4;35;1mFeature Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Create (0.7ms)[0m   [0mINSERT INTO `features` (`created_at`, `Name`, `updated_at`) VALUES('2010-10-20 20:42:56', 'Fireplace', '2010-10-20 20:42:56')[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/features/1
+Completed in 22ms (DB: 10) | 302 Found [http://localhost/features]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeaturesController#show (for 127.0.0.1 at 2010-10-21 07:42:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFeature Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+  [4;35;1mFeature Load (0.2ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 1) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 11ms (View: 8, DB: 1) | 200 OK [http://localhost/features/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeaturesController#index (for 127.0.0.1 at 2010-10-21 07:43:01) [GET]
+  [4;35;1mFeature Load (0.4ms)[0m   [0mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+  [4;36;1mFeature Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+Completed in 14ms (View: 6, DB: 2) | 200 OK [http://localhost/features]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeaturesController#new (for 127.0.0.1 at 2010-10-21 07:43:04) [GET]
+  [4;36;1mFeature Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+Rendering template within layouts/features
+Rendering features/new
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/features/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeaturesController#create (for 127.0.0.1 at 2010-10-21 07:43:16) [POST]
+  Parameters: {"feature"=>{"Name"=>"Fully Licensed"}, "commit"=>"Create", "authenticity_token"=>"f2Oo6xRJ5PwjmHMf24ooE8RE7QVr2YuowfFFxJaoF3E="}
+  [4;36;1mFeature Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mFeature Create (0.6ms)[0m   [0;1mINSERT INTO `features` (`created_at`, `Name`, `updated_at`) VALUES('2010-10-20 20:43:16', 'Fully Licensed', '2010-10-20 20:43:16')[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/features/2
+Completed in 12ms (DB: 7) | 302 Found [http://localhost/features]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeaturesController#show (for 127.0.0.1 at 2010-10-21 07:43:16) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mFeature Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+  [4;36;1mFeature Load (0.2ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 2) [0m
+Rendering template within layouts/features
+Rendering features/show
+Completed in 5ms (View: 2, DB: 1) | 200 OK [http://localhost/features/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FeaturesController#index (for 127.0.0.1 at 2010-10-21 07:43:17) [GET]
+  [4;36;1mFeature Load (0.2ms)[0m   [0;1mSELECT * FROM `features` [0m
+Rendering template within layouts/features
+Rendering features/index
+  [4;35;1mFeature Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+Completed in 22ms (View: 5, DB: 1) | 200 OK [http://localhost/features]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateBusinesses (20101020203634)
+Migrating to CreateFeatures (20101020203911)
+Migrating to CreateBusinessFeatures (20101020204748)
+  [4;35;1mSQL (25.9ms)[0m   [0mCREATE TABLE `business_features` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `business_id` int(11), `feature_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (4.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101020204748')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `business_features`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `business_features`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `business_features`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `businesses`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW KEYS FROM `businesses`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `features`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `features`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#index (for 127.0.0.1 at 2010-10-21 07:56:39) [GET]
+  [4;35;1mBusiness Load (0.1ms)[0m   [0mSELECT * FROM `businesses` [0m
+Rendering template within layouts/businesses
+Rendering businesses/index
+  [4;36;1mBusiness Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+Completed in 88ms (View: 4, DB: 1) | 200 OK [http://localhost/businesses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#new (for 127.0.0.1 at 2010-10-21 07:56:42) [GET]
+  [4;36;1mBusiness Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mFeature Load (0.1ms)[0m   [0mSELECT * FROM `features` [0m
+Rendering template within layouts/businesses
+Rendering businesses/new
+  [4;36;1mFeature Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+
+ActionView::TemplateError (undefined method `foreach' for #<Array:0xb68b7e08>) on line #32 of app/views/businesses/new.html.erb:
+29:   </p>
+30: 
+31:   <p>
+32:   <% @features.foreach do |ft| %>
+33:     <%= f.label ft.name %>
+34:     <%= f.checkbox :Feature %>
+35:   <% end %>
+
+    app/views/businesses/new.html.erb:32
+    app/views/businesses/new.html.erb:3
+    app/controllers/businesses_controller.rb:31:in `new'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#new (for 127.0.0.1 at 2010-10-21 07:56:59) [GET]
+  [4;36;1mBusiness Columns (258.2ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mFeature Load (0.2ms)[0m   [0mSELECT * FROM `features` [0m
+Rendering template within layouts/businesses
+Rendering businesses/new
+  [4;36;1mFeature Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+
+ActionView::TemplateError (undefined method `name' for #<Feature:0xb66c9d80>) on line #33 of app/views/businesses/new.html.erb:
+30: 
+31:   <p>
+32:   <% @features.each do |ft| %>
+33:     <%= f.label ft.name %>
+34:     <%= f.checkbox :Feature %>
+35:   <% end %>
+36:   </p>
+
+    app/views/businesses/new.html.erb:33
+    app/views/businesses/new.html.erb:32:in `each'
+    app/views/businesses/new.html.erb:32
+    app/views/businesses/new.html.erb:3
+    app/controllers/businesses_controller.rb:31:in `new'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#new (for 127.0.0.1 at 2010-10-21 08:01:03) [GET]
+  [4;36;1mBusiness Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mFeature Load (0.3ms)[0m   [0mSELECT * FROM `features` [0m
+Rendering template within layouts/businesses
+Rendering businesses/new
+  [4;36;1mFeature Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+
+ActionView::TemplateError (undefined method `checkbox' for #<ActionView::Helpers::FormBuilder:0xb677bf80>) on line #34 of app/views/businesses/new.html.erb:
+31:   <p>
+32:   <% @features.each do |ftr| %>
+33:     <%= f.label ftr.Name %>
+34:     <%= f.checkbox :Feature %>
+35:   <% end %>
+36:   </p>
+37:   <p>
+
+    app/views/businesses/new.html.erb:34
+    app/views/businesses/new.html.erb:32:in `each'
+    app/views/businesses/new.html.erb:32
+    app/views/businesses/new.html.erb:3
+    app/controllers/businesses_controller.rb:31:in `new'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (97.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#new (for 127.0.0.1 at 2010-10-21 08:10:59) [GET]
+  [4;36;1mBusiness Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mFeature Load (0.2ms)[0m   [0mSELECT * FROM `features` [0m
+Rendering template within layouts/businesses
+Rendering businesses/new
+  [4;36;1mFeature Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+
+ActionView::TemplateError (undefined method `merge' for :Feature:Symbol) on line #34 of app/views/businesses/new.html.erb:
+31:   <p>
+32:   <% @features.each do |ftr| %>
+33:     <%= f.label ftr.Name %>
+34:     <%= f.check_box :Business, :Feature, "yes", "no"  %>
+35:   <% end %>
+36:   </p>
+37:   <p>
+
+    app/views/businesses/new.html.erb:34
+    app/views/businesses/new.html.erb:32:in `each'
+    app/views/businesses/new.html.erb:32
+    app/views/businesses/new.html.erb:3
+    app/controllers/businesses_controller.rb:31:in `new'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#new (for 127.0.0.1 at 2010-10-21 08:11:35) [GET]
+  [4;36;1mBusiness Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mFeature Load (0.5ms)[0m   [0mSELECT * FROM `features` [0m
+Rendering template within layouts/businesses
+Rendering businesses/new
+  [4;36;1mFeature Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+
+ActionView::TemplateError (undefined method `merge' for :features:Symbol) on line #34 of app/views/businesses/new.html.erb:
+31:   <p>
+32:   <% @features.each do |ftr| %>
+33:     <%= f.label ftr.Name %>
+34:     <%= f.check_box :Business, :features, "yes", "no"  %>
+35:   <% end %>
+36:   </p>
+37:   <p>
+
+    app/views/businesses/new.html.erb:34
+    app/views/businesses/new.html.erb:32:in `each'
+    app/views/businesses/new.html.erb:32
+    app/views/businesses/new.html.erb:3
+    app/controllers/businesses_controller.rb:31:in `new'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#new (for 127.0.0.1 at 2010-10-21 08:13:24) [GET]
+  [4;36;1mBusiness Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mFeature Load (0.1ms)[0m   [0mSELECT * FROM `features` [0m
+Rendering template within layouts/businesses
+Rendering businesses/new
+  [4;36;1mFeature Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+Completed in 19ms (View: 11, DB: 2) | 200 OK [http://localhost/businesses/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#new (for 127.0.0.1 at 2010-10-21 08:26:19) [GET]
+  [4;36;1mBusiness Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mFeature Load (1.2ms)[0m   [0mSELECT * FROM `features` [0m
+Rendering template within layouts/businesses
+Rendering businesses/new
+  [4;36;1mFeature Columns (9.1ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mMysql::Error: Table 'CEDataCapture_DEV.businesses_features' doesn't exist: SELECT `features`.id FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 1) AND (`businesses_features`.business_id = NULL ) LIMIT 1[0m
+
+ActionView::TemplateError (Mysql::Error: Table 'CEDataCapture_DEV.businesses_features' doesn't exist: SELECT `features`.id FROM `features`  INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 1) AND (`businesses_features`.business_id = NULL )  LIMIT 1) on line #34 of app/views/businesses/new.html.erb:
+31:   <p>
+32:   <% @features.each do |ftr| %>
+33:   <div>
+34:     <%= check_box_tag "business[features_ids][]", ftr.id, @business.features.include?(ftr)  %>
+35:     <%= ftr.Name %>
+36:   </div>
+37:   <% end %>
+
+    app/views/businesses/new.html.erb:34
+    app/views/businesses/new.html.erb:32:in `each'
+    app/views/businesses/new.html.erb:32
+    app/views/businesses/new.html.erb:3
+    app/controllers/businesses_controller.rb:31:in `new'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (34.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateBusinessFeatures (20101020204748)
+  [4;35;1mSQL (56.5ms)[0m   [0mDROP TABLE `business_features`[0m
+  [4;36;1mSQL (32.8ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20101020204748'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `businesses`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `businesses`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mdescribe `features`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `features`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateBusinesses (20101020203634)
+Migrating to CreateFeatures (20101020203911)
+Migrating to CreateBusinessesFeatures (20101020204748)
+  [4;35;1mSQL (76.5ms)[0m   [0mCREATE TABLE `businesses_features` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `business_id` int(11), `feature_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (5.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101020204748')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `businesses`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `businesses`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW FIELDS FROM `businesses_features`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `businesses_features`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `businesses_features`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `features`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `features`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#new (for 127.0.0.1 at 2010-10-21 08:27:58) [GET]
+  [4;35;1mBusiness Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mFeature Load (0.1ms)[0m   [0;1mSELECT * FROM `features` [0m
+Rendering template within layouts/businesses
+Rendering businesses/new
+  [4;35;1mFeature Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+  [4;36;1mFeature Load (0.3ms)[0m   [0;1mSELECT `features`.id FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 1) AND (`businesses_features`.business_id = NULL ) LIMIT 1[0m
+  [4;35;1mFeature Load (0.1ms)[0m   [0mSELECT `features`.id FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 2) AND (`businesses_features`.business_id = NULL ) LIMIT 1[0m
+Completed in 20ms (View: 11, DB: 4) | 200 OK [http://localhost/businesses/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#index (for 127.0.0.1 at 2010-10-21 08:35:08) [GET]
+  [4;35;1mBusiness Load (0.3ms)[0m   [0mSELECT * FROM `businesses` [0m
+Rendering template within layouts/businesses
+Rendering businesses/index
+  [4;36;1mBusiness Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+Completed in 41ms (View: 13, DB: 4) | 200 OK [http://localhost/businesses]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#edit (for 127.0.0.1 at 2010-10-21 08:35:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBusiness Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mBusiness Load (0.1ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+Rendering template within layouts/businesses
+Rendering businesses/edit
+  [4;36;1mFeature Load (0.1ms)[0m   [0;1mSELECT * FROM `features` [0m
+  [4;35;1mFeature Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+  [4;36;1mFeature Load (1.4ms)[0m   [0;1mSELECT `features`.id FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 1) AND (`businesses_features`.business_id = 1 ) LIMIT 1[0m
+  [4;35;1mFeature Load (0.1ms)[0m   [0mSELECT `features`.id FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 2) AND (`businesses_features`.business_id = 1 ) LIMIT 1[0m
+Completed in 22ms (View: 15, DB: 3) | 200 OK [http://localhost/businesses/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#update (for 127.0.0.1 at 2010-10-21 08:35:15) [PUT]
+  Parameters: {"commit"=>"Update", "business"=>{"features_ids"=>["1"], "AddressLine1"=>"Old Pittwater Rd", "AddressLine2"=>"", "Name"=>"Community Engine", "Review"=>"This is a sample business listing", "Postcode"=>"2096", "Suburb"=>"Brookvale", "State"=>"NSW"}, "authenticity_token"=>"f2Oo6xRJ5PwjmHMf24ooE8RE7QVr2YuowfFFxJaoF3E=", "id"=>"1"}
+  [4;35;1mBusiness Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (0.1ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+
+ActiveRecord::UnknownAttributeError (unknown attribute: features_ids):
+  app/controllers/businesses_controller.rb:64:in `update'
+  app/controllers/businesses_controller.rb:63:in `update'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#update (for 127.0.0.1 at 2010-10-21 08:35:54) [PUT]
+  Parameters: {"commit"=>"Update", "business"=>{"features_ids"=>["2"], "AddressLine1"=>"Old Pittwater Rd", "AddressLine2"=>"", "Name"=>"Community Engine", "Review"=>"This is a sample business listing", "Postcode"=>"2096", "Suburb"=>"Brookvale", "State"=>"NSW"}, "authenticity_token"=>"f2Oo6xRJ5PwjmHMf24ooE8RE7QVr2YuowfFFxJaoF3E=", "id"=>"1"}
+  [4;36;1mBusiness Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mBusiness Load (1.7ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+
+ActiveRecord::UnknownAttributeError (unknown attribute: features_ids):
+  app/controllers/businesses_controller.rb:64:in `update'
+  app/controllers/businesses_controller.rb:63:in `update'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (82.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#update (for 127.0.0.1 at 2010-10-21 08:36:35) [PUT]
+  Parameters: {"commit"=>"Update", "business"=>{"features_ids"=>["2"], "AddressLine1"=>"Old Pittwater Rd", "AddressLine2"=>"", "Name"=>"Community Engine", "Review"=>"This is a sample business listing", "Postcode"=>"2096", "Suburb"=>"Brookvale", "State"=>"NSW"}, "authenticity_token"=>"f2Oo6xRJ5PwjmHMf24ooE8RE7QVr2YuowfFFxJaoF3E=", "id"=>"1"}
+  [4;35;1mBusiness Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (0.1ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+
+ActiveRecord::UnknownAttributeError (unknown attribute: features_ids):
+  app/controllers/businesses_controller.rb:64:in `update'
+  app/controllers/businesses_controller.rb:63:in `update'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#update (for 127.0.0.1 at 2010-10-21 08:36:53) [PUT]
+  Parameters: {"commit"=>"Update", "business"=>{"features_ids"=>["1", "2"], "AddressLine1"=>"Old Pittwater Rd", "AddressLine2"=>"", "Name"=>"Community Engine", "Review"=>"This is a sample business listing", "Postcode"=>"2096", "Suburb"=>"Brookvale", "State"=>"NSW"}, "authenticity_token"=>"f2Oo6xRJ5PwjmHMf24ooE8RE7QVr2YuowfFFxJaoF3E=", "id"=>"1"}
+  [4;36;1mBusiness Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mBusiness Load (0.1ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+
+ActiveRecord::UnknownAttributeError (unknown attribute: features_ids):
+  app/controllers/businesses_controller.rb:64:in `update'
+  app/controllers/businesses_controller.rb:63:in `update'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#index (for 127.0.0.1 at 2010-10-21 08:39:21) [GET]
+  [4;35;1mBusiness Load (0.1ms)[0m   [0mSELECT * FROM `businesses` [0m
+Rendering template within layouts/businesses
+Rendering businesses/index
+  [4;36;1mBusiness Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+Completed in 31ms (View: 12, DB: 2) | 200 OK [http://localhost/businesses]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#edit (for 127.0.0.1 at 2010-10-21 08:39:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBusiness Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mBusiness Load (0.1ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+Rendering template within layouts/businesses
+Rendering businesses/edit
+  [4;36;1mFeature Load (0.1ms)[0m   [0;1mSELECT * FROM `features` [0m
+  [4;35;1mFeature Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+  [4;36;1mFeature Load (0.1ms)[0m   [0;1mSELECT `features`.id FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 1) AND (`businesses_features`.business_id = 1 ) LIMIT 1[0m
+  [4;35;1mFeature Load (0.0ms)[0m   [0mSELECT `features`.id FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 2) AND (`businesses_features`.business_id = 1 ) LIMIT 1[0m
+Completed in 31ms (View: 22, DB: 4) | 200 OK [http://localhost/businesses/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#update (for 127.0.0.1 at 2010-10-21 08:39:48) [PUT]
+  Parameters: {"commit"=>"Update", "business"=>{"AddressLine1"=>"Old Pittwater Rd", "AddressLine2"=>"", "Name"=>"Community Engine", "Review"=>"This is a sample business listing", "feature_ids"=>["1"], "Postcode"=>"2096", "Suburb"=>"Brookvale", "State"=>"NSW"}, "authenticity_token"=>"f2Oo6xRJ5PwjmHMf24ooE8RE7QVr2YuowfFFxJaoF3E=", "id"=>"1"}
+  [4;35;1mBusiness Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (0.9ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+  [4;35;1mFeature Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+  [4;36;1mFeature Load (0.5ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 1) [0m
+  [4;35;1mbusinesses_features Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `businesses_features`[0m
+  [4;36;1mFeature Load (0.4ms)[0m   [0;1mSELECT * FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`businesses_features`.business_id = 1 ) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `businesses_features`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+
+ActiveRecord::ConfigurationError (Primary key is not allowed in a has_and_belongs_to_many join table (businesses_features).):
+  app/controllers/businesses_controller.rb:64:in `update'
+  app/controllers/businesses_controller.rb:63:in `update'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (104.5ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateBusinessesFeatures (20101020204748)
+  [4;35;1mSQL (14.5ms)[0m   [0mDROP TABLE `businesses_features`[0m
+  [4;36;1mSQL (5.6ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20101020204748'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mdescribe `businesses`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW KEYS FROM `businesses`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `features`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `features`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateBusinesses (20101020203634)
+Migrating to CreateFeatures (20101020203911)
+Migrating to CreateBusinessesFeatures (20101020204748)
+  [4;35;1mSQL (68.4ms)[0m   [0mCREATE TABLE `businesses_features` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `business_id` int(11), `feature_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (4.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101020204748')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `businesses`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `businesses`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW FIELDS FROM `businesses_features`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mdescribe `businesses_features`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `businesses_features`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `features`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `features`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateBusinessesFeatures (20101020204748)
+  [4;35;1mSQL (10.1ms)[0m   [0mDROP TABLE `businesses_features`[0m
+  [4;36;1mSQL (5.4ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20101020204748'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mSQL (8.1ms)[0m   [0mdescribe `businesses`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `businesses`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mdescribe `features`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSHOW KEYS FROM `features`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateBusinesses (20101020203634)
+Migrating to CreateFeatures (20101020203911)
+Migrating to CreateBusinessesFeatures (20101020204748)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateBusinesses (20101020203634)
+Migrating to CreateFeatures (20101020203911)
+Migrating to CreateBusinessesFeatures (20101020204748)
+  [4;35;1mSQL (52.3ms)[0m   [0mCREATE TABLE `businesses_features` (`business_id` int(11), `feature_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101020204748')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `businesses`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `businesses`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mSHOW FIELDS FROM `businesses_features`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mdescribe `businesses_features`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `businesses_features`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `features`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSHOW KEYS FROM `features`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#update (for 127.0.0.1 at 2010-10-21 08:48:17) [PUT]
+  Parameters: {"commit"=>"Update", "business"=>{"AddressLine1"=>"Old Pittwater Rd", "AddressLine2"=>"", "Name"=>"Community Engine", "Review"=>"This is a sample business listing", "feature_ids"=>["1"], "Postcode"=>"2096", "Suburb"=>"Brookvale", "State"=>"NSW"}, "authenticity_token"=>"f2Oo6xRJ5PwjmHMf24ooE8RE7QVr2YuowfFFxJaoF3E=", "id"=>"1"}
+  [4;35;1mBusiness Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (1.0ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+  [4;35;1mFeature Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+  [4;36;1mFeature Load (0.0ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 1) [0m
+  [4;35;1mbusinesses_features Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `businesses_features`[0m
+  [4;36;1mFeature Load (0.2ms)[0m   [0;1mSELECT * FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`businesses_features`.business_id = 1 ) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mdescribe `businesses_features`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO `businesses_features` (`feature_id`, `business_id`) VALUES (1, 1)[0m
+  [4;36;1mSQL (6.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/businesses/1
+Completed in 21ms (DB: 10) | 302 Found [http://localhost/businesses/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#show (for 127.0.0.1 at 2010-10-21 08:48:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBusiness Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mBusiness Load (0.1ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+Rendering template within layouts/businesses
+Rendering businesses/show
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://localhost/businesses/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#edit (for 127.0.0.1 at 2010-10-21 08:48:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBusiness Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (0.1ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+Rendering template within layouts/businesses
+Rendering businesses/edit
+  [4;35;1mFeature Load (0.1ms)[0m   [0mSELECT * FROM `features` [0m
+  [4;36;1mFeature Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+  [4;35;1mFeature Load (0.3ms)[0m   [0mSELECT `features`.id FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 1) AND (`businesses_features`.business_id = 1 ) LIMIT 1[0m
+  [4;36;1mFeature Load (0.3ms)[0m   [0;1mSELECT `features`.id FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 2) AND (`businesses_features`.business_id = 1 ) LIMIT 1[0m
+Completed in 29ms (View: 19, DB: 3) | 200 OK [http://localhost/businesses/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#update (for 127.0.0.1 at 2010-10-21 08:48:29) [PUT]
+  Parameters: {"commit"=>"Update", "business"=>{"AddressLine1"=>"Old Pittwater Rd", "AddressLine2"=>"", "Name"=>"Community Engine", "Review"=>"This is a sample business listing", "feature_ids"=>["2"], "Postcode"=>"2096", "Suburb"=>"Brookvale", "State"=>"NSW"}, "authenticity_token"=>"f2Oo6xRJ5PwjmHMf24ooE8RE7QVr2YuowfFFxJaoF3E=", "id"=>"1"}
+  [4;36;1mBusiness Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mBusiness Load (0.1ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+  [4;36;1mFeature Columns (6.3ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+  [4;35;1mFeature Load (0.1ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` = 2) [0m
+  [4;36;1mbusinesses_features Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `businesses_features`[0m
+  [4;35;1mFeature Load (0.3ms)[0m   [0mSELECT * FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`businesses_features`.business_id = 1 ) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDELETE FROM `businesses_features` WHERE business_id = 1 AND feature_id IN (1)[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `businesses_features`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `businesses_features` (`feature_id`, `business_id`) VALUES (2, 1)[0m
+  [4;36;1mSQL (61.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/businesses/1
+Completed in 86ms (DB: 73) | 302 Found [http://localhost/businesses/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#show (for 127.0.0.1 at 2010-10-21 08:48:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBusiness Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mBusiness Load (3.2ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+Rendering template within layouts/businesses
+Rendering businesses/show
+Completed in 11ms (View: 2, DB: 4) | 200 OK [http://localhost/businesses/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#edit (for 127.0.0.1 at 2010-10-21 08:48:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBusiness Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (0.1ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+Rendering template within layouts/businesses
+Rendering businesses/edit
+  [4;35;1mFeature Load (0.1ms)[0m   [0mSELECT * FROM `features` [0m
+  [4;36;1mFeature Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+  [4;35;1mFeature Load (0.2ms)[0m   [0mSELECT `features`.id FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 1) AND (`businesses_features`.business_id = 1 ) LIMIT 1[0m
+  [4;36;1mFeature Load (0.2ms)[0m   [0;1mSELECT `features`.id FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 2) AND (`businesses_features`.business_id = 1 ) LIMIT 1[0m
+Completed in 19ms (View: 13, DB: 3) | 200 OK [http://localhost/businesses/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#update (for 127.0.0.1 at 2010-10-21 08:49:54) [PUT]
+  Parameters: {"commit"=>"Update", "business"=>{"AddressLine1"=>"Old Pittwater Rd", "AddressLine2"=>"", "Name"=>"Community Engine", "Review"=>"This is a sample business listing", "Postcode"=>"2096", "Suburb"=>"Brookvale", "State"=>"NSW"}, "authenticity_token"=>"f2Oo6xRJ5PwjmHMf24ooE8RE7QVr2YuowfFFxJaoF3E=", "id"=>"1"}
+  [4;36;1mBusiness Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mBusiness Load (0.3ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+  [4;36;1mbusinesses_features Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `businesses_features`[0m
+  [4;35;1mFeature Load (0.6ms)[0m   [0mSELECT * FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`businesses_features`.business_id = 1 ) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFeature Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM `businesses_features` WHERE business_id = 1 AND feature_id IN (2)[0m
+  [4;35;1mSQL (5.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/businesses/1
+Completed in 19ms (DB: 9) | 302 Found [http://localhost/businesses/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#show (for 127.0.0.1 at 2010-10-21 08:49:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBusiness Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (0.1ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+Rendering template within layouts/businesses
+Rendering businesses/show
+Completed in 9ms (View: 2, DB: 4) | 200 OK [http://localhost/businesses/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#edit (for 127.0.0.1 at 2010-10-21 08:49:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBusiness Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mBusiness Load (0.1ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+Rendering template within layouts/businesses
+Rendering businesses/edit
+  [4;36;1mFeature Load (0.1ms)[0m   [0;1mSELECT * FROM `features` [0m
+  [4;35;1mFeature Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+  [4;36;1mFeature Load (0.2ms)[0m   [0;1mSELECT `features`.id FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 1) AND (`businesses_features`.business_id = 1 ) LIMIT 1[0m
+  [4;35;1mFeature Load (0.1ms)[0m   [0mSELECT `features`.id FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 2) AND (`businesses_features`.business_id = 1 ) LIMIT 1[0m
+Completed in 19ms (View: 13, DB: 3) | 200 OK [http://localhost/businesses/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#update (for 127.0.0.1 at 2010-10-21 08:50:00) [PUT]
+  Parameters: {"commit"=>"Update", "business"=>{"AddressLine1"=>"Old Pittwater Rd", "AddressLine2"=>"", "Name"=>"Community Engine", "Review"=>"This is a sample business listing", "feature_ids"=>["1"], "Postcode"=>"2096", "Suburb"=>"Brookvale", "State"=>"NSW"}, "authenticity_token"=>"f2Oo6xRJ5PwjmHMf24ooE8RE7QVr2YuowfFFxJaoF3E=", "id"=>"1"}
+  [4;35;1mBusiness Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (0.1ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+  [4;35;1mFeature Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `features`[0m
+  [4;36;1mFeature Load (0.1ms)[0m   [0;1mSELECT * FROM `features` WHERE (`features`.`id` = 1) [0m
+  [4;35;1mbusinesses_features Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `businesses_features`[0m
+  [4;36;1mFeature Load (0.2ms)[0m   [0;1mSELECT * FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`businesses_features`.business_id = 1 ) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mdescribe `businesses_features`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO `businesses_features` (`feature_id`, `business_id`) VALUES (1, 1)[0m
+  [4;36;1mSQL (10.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/businesses/1
+Completed in 35ms (DB: 16) | 302 Found [http://localhost/businesses/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#show (for 127.0.0.1 at 2010-10-21 08:50:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBusiness Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mBusiness Load (0.1ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+Rendering template within layouts/businesses
+Rendering businesses/show
+Completed in 8ms (View: 2, DB: 1) | 200 OK [http://localhost/businesses/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#edit (for 127.0.0.1 at 2010-10-21 08:50:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBusiness Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (1.2ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+Rendering template within layouts/businesses
+Rendering businesses/edit
+  [4;35;1mFeature Load (0.1ms)[0m   [0mSELECT * FROM `features` [0m
+  [4;36;1mFeature Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+  [4;35;1mFeature Load (1.4ms)[0m   [0mSELECT `features`.id FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 1) AND (`businesses_features`.business_id = 1 ) LIMIT 1[0m
+  [4;36;1mFeature Load (0.6ms)[0m   [0;1mSELECT `features`.id FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`features`.`id` = 2) AND (`businesses_features`.business_id = 1 ) LIMIT 1[0m
+Completed in 42ms (View: 22, DB: 6) | 200 OK [http://localhost/businesses/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#update (for 127.0.0.1 at 2010-10-21 08:52:19) [PUT]
+  Parameters: {"commit"=>"Update", "business"=>{"AddressLine1"=>"Old Pittwater Rd", "AddressLine2"=>"", "Name"=>"Community Engine", "Review"=>"This is a sample business listing", "feature_ids"=>["1", "2"], "Postcode"=>"2096", "Suburb"=>"Brookvale", "State"=>"NSW"}, "authenticity_token"=>"f2Oo6xRJ5PwjmHMf24ooE8RE7QVr2YuowfFFxJaoF3E=", "id"=>"1"}
+  [4;36;1mBusiness Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mBusiness Load (0.1ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+  [4;36;1mFeature Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+  [4;35;1mFeature Load (32.1ms)[0m   [0mSELECT * FROM `features` WHERE (`features`.`id` IN (1,2)) [0m
+  [4;36;1mbusinesses_features Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `businesses_features`[0m
+  [4;35;1mFeature Load (1.0ms)[0m   [0mSELECT * FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`businesses_features`.business_id = 1 ) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mdescribe `businesses_features`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO `businesses_features` (`feature_id`, `business_id`) VALUES (2, 1)[0m
+  [4;35;1mSQL (9.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/businesses/1
+Completed in 97ms (DB: 45) | 302 Found [http://localhost/businesses/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#show (for 127.0.0.1 at 2010-10-21 08:52:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mBusiness Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (0.1ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+Rendering template within layouts/businesses
+Rendering businesses/show
+ERROR: compiling _run_erb_app47views47businesses47show46html46erb RAISED compile error
+/home/peterwhitfield/Projects/CEDataCapture/app/views/businesses/show.html.erb:47: syntax error, unexpected kENSURE, expecting kEND
+/home/peterwhitfield/Projects/CEDataCapture/app/views/businesses/show.html.erb:49: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47businesses47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>\n  <b>Name:</b>\n  "
+
+; @output_buffer.concat((h @business.Name ).to_s); @output_buffer.concat "\n</p>\n\n<p>\n  <b>Addressline1:</b>\n  "
+
+
+
+
+; @output_buffer.concat((h @business.AddressLine1 ).to_s); @output_buffer.concat "\n</p>\n\n<p>\n  <b>Addressline2:</b>\n  "
+
+
+
+
+; @output_buffer.concat((h @business.AddressLine2 ).to_s); @output_buffer.concat "\n</p>\n\n<p>\n  <b>Suburb:</b>\n  "
+
+
+
+
+; @output_buffer.concat((h @business.Suburb ).to_s); @output_buffer.concat "\n</p>\n\n<p>\n  <b>State:</b>\n  "
+
+
+
+
+; @output_buffer.concat((h @business.State ).to_s); @output_buffer.concat "\n</p>\n\n<p>\n  <b>Postcode:</b>\n  "
+
+
+
+
+; @output_buffer.concat((h @business.Postcode ).to_s); @output_buffer.concat "\n</p>\n\n<p>\n  <b>Features:</b>\n  "
+
+
+
+
+;  @business.features.each do |f| ; @output_buffer.concat "\n  <div>\n    "
+
+; @output_buffer.concat(( f.Name ).to_s); @output_buffer.concat "\n  </div>\n</p>\n\n<p>\n  <b>Review:</b>\n  "
+
+
+
+
+
+; @output_buffer.concat((h @business.Review ).to_s); @output_buffer.concat "\n</p>\n\n\n"
+
+
+
+; @output_buffer.concat(( link_to 'Edit', edit_business_path(@business) ).to_s); @output_buffer.concat " |\n"
+; @output_buffer.concat(( link_to 'Back', businesses_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/peterwhitfield/Projects/CEDataCapture/app/views/businesses/show.html.erb:49:in `compile!'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/peterwhitfield/Projects/CEDataCapture/app/controllers/businesses_controller.rb:18:in `show'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+/home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+/home/peterwhitfield/.rvm/gems/ruby-1.8.7-p174@rails238_hobo/gems/rails-2.3.8/lib/commands/server.rb:111
+/home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/peterwhitfield/Projects/CEDataCapture/app/views/businesses/show.html.erb:47: syntax error, unexpected kENSURE, expecting kEND
+/home/peterwhitfield/Projects/CEDataCapture/app/views/businesses/show.html.erb:49: syntax error, unexpected $end, expecting kEND) on line #47 of app/views/businesses/show.html.erb:
+44: 
+45: <%= link_to 'Edit', edit_business_path(@business) %> |
+46: <%= link_to 'Back', businesses_path %>
+
+    app/views/businesses/show.html.erb:49:in `compile!'
+    app/controllers/businesses_controller.rb:18:in `show'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /home/peterwhitfield/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BusinessesController#show (for 127.0.0.1 at 2010-10-21 08:52:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mBusiness Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mBusiness Load (0.1ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.`id` = 1) [0m
+Rendering template within layouts/businesses
+Rendering businesses/show
+  [4;36;1mbusinesses_features Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `businesses_features`[0m
+  [4;35;1mFeature Load (64.6ms)[0m   [0mSELECT * FROM `features` INNER JOIN `businesses_features` ON `features`.id = `businesses_features`.feature_id WHERE (`businesses_features`.business_id = 1 ) [0m
+  [4;36;1mFeature Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `features`[0m
+Completed in 91ms (View: 16, DB: 68) | 200 OK [http://localhost/businesses/1]

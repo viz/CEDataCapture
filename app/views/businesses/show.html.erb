@@ -1,0 +1,47 @@
+<p>
+  <b>Name:</b>
+  <%=h @business.Name %>
+</p>
+
+<p>
+  <b>Addressline1:</b>
+  <%=h @business.AddressLine1 %>
+</p>
+
+<p>
+  <b>Addressline2:</b>
+  <%=h @business.AddressLine2 %>
+</p>
+
+<p>
+  <b>Suburb:</b>
+  <%=h @business.Suburb %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @business.State %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%=h @business.Postcode %>
+</p>
+
+<p>
+  <b>Features:</b>
+  <% @business.features.each do |f| %>
+  <div>
+    <%= f.Name %>
+  </div>
+  <% end %>
+</p>
+
+<p>
+  <b>Review:</b>
+  <%=h @business.Review %>
+</p>
+
+
+<%= link_to 'Edit', edit_business_path(@business) %> |
+<%= link_to 'Back', businesses_path %>

@@ -1,0 +1,15 @@
+<h1>New feature</h1>
+
+<% form_for(@feature) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Name %><br />
+    <%= f.text_field :Name %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', features_path %>

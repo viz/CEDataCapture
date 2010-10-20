@@ -1,0 +1,48 @@
+<h1>Editing business</h1>
+
+<% form_for(@business) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Name %><br />
+    <%= f.text_field :Name %>
+  </p>
+  <p>
+    <%= f.label :AddressLine1 %><br />
+    <%= f.text_field :AddressLine1 %>
+  </p>
+  <p>
+    <%= f.label :AddressLine2 %><br />
+    <%= f.text_field :AddressLine2 %>
+  </p>
+  <p>
+    <%= f.label :Suburb %><br />
+    <%= f.text_field :Suburb %>
+  </p>
+  <p>
+    <%= f.label :State %><br />
+    <%= f.text_field :State %>
+  </p>
+  <p>
+    <%= f.label :Postcode %><br />
+    <%= f.text_field :Postcode %>
+  </p>
+    <p>
+  <% for ftr in Feature.find(:all) %>
+  <div>
+    <%= check_box_tag "business[feature_ids][]", ftr.id, @business.features.include?(ftr)  %>
+    <%= ftr.Name %>
+  </div>
+  <% end %>
+  </p>
+  <p>
+    <%= f.label :Review %><br />
+    <%= f.text_area :Review %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @business %> |
+<%= link_to 'Back', businesses_path %>
